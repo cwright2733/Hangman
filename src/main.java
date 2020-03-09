@@ -15,8 +15,8 @@ public class main {
         Random random = new Random();
 
         String guesses[] = {
-                "reddit", "facebook", "java", "assignment",
-                "game", "hello", "islam", "religion", "internet", "face"};
+                "reddit", "lebron", "java", "kobe",
+                "game", "hello", "islam", "Zion", "internet", "face"};
 
         boolean weArePlaying = true;
         while(weArePlaying){
@@ -33,13 +33,74 @@ public class main {
             boolean wordIsGuessed = false;
             int tries = 0;
 
-            while(!wordIsGuessed && tries != ammountOfGuesses){
+            while((!wordIsGuessed && tries  <= 7)){
                 System.out.println("Current Guesses: ");
                 print(playerGuess);
-                System.out.printf("You have %d ammount of tries left.\n", ammountOfGuesses-tries);
+//                System.out.printf("You have %d ammount of tries left.\n", ammountOfGuesses-tries);
+                System.out.println("Keep going you have 7 tries");
                 System.out.println("Enter a single character: ");
                 char input = scanner.nextLine().charAt(0);
                 tries++;
+
+                switch(tries){
+                    case 1:
+                        System.out.println("+--+");
+                        System.out.println("|  |");
+                        System.out.println("o  |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("   ===");
+                System.out.print("\n");
+                System.out.printf("You are on your  %d try.\n", tries);
+                break;
+                    case 2:
+                        System.out.println("+--+");
+                        System.out.println("|  |");
+                        System.out.println("    |");
+                        System.out.println("    |");
+                        System.out.println("    |");
+                        System.out.println("   ===");
+                        System.out.print("\n");
+                        System.out.printf("You are on your  %d try.\n", tries);
+                        break;
+                    case 3:
+                        System.out.println("+--+");
+                        System.out.println("    |");
+                        System.out.println("    |");
+                        System.out.println("    |");
+                        System.out.println("   ===");
+                        System.out.print("\n");
+                        System.out.printf("You are on your  %d try.\n", tries);
+                        break;
+                    case 4:
+                        System.out.println("    |");
+                        System.out.println("    |");
+                        System.out.println("    |");
+                        System.out.println("   ===");
+                        System.out.print("\n");
+                        System.out.printf("You are on your  %d try.\n", tries);
+                        break;
+                    case 5:
+                        System.out.println("    |");
+                        System.out.println("    |");
+                        System.out.println("   ===");
+                        System.out.print("\n");
+                        System.out.printf("You are on your  %d try.\n", tries);
+                        break;
+                    case 6:
+                        System.out.println("    |");
+                        System.out.println("   ===");
+                        System.out.print("\n");
+                        System.out.printf("You are on your  %d try.\n", tries);
+                        break;
+                    case 7:
+                        System.out.println("   ===");
+                        System.out.print("\n");
+                        System.out.printf("You are on your  %d try.\n", tries);
+                        break;
+                }
+
 
                 if(input == '-'){
                     wordIsGuessed = true;
@@ -89,9 +150,6 @@ public class main {
         return condition;
     }
 
-    public static void displayH(int lives){
-        switch (lives)
-
 
     }
 
@@ -102,7 +160,7 @@ public class main {
 
 
 
-}
+
 
 
 
