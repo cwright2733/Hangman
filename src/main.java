@@ -33,7 +33,7 @@ public class main {
             boolean wordIsGuessed = false;
             int tries = 0;
 
-            while((!wordIsGuessed && tries  <= 7)){
+            while((!wordIsGuessed && tries == ammountOfGuesses) || ( tries < 7)){
                 System.out.println("Current Guesses: ");
                 print(playerGuess);
 //                System.out.printf("You have %d ammount of tries left.\n", ammountOfGuesses-tries);
@@ -42,64 +42,112 @@ public class main {
                 char input = scanner.nextLine().charAt(0);
                 tries++;
 
+
+
                 switch(tries){
                     case 1:
-                        System.out.println("+--+");
-                        System.out.println("|  |");
-                        System.out.println("o  |");
-                System.out.println("    |");
-                System.out.println("    |");
-                System.out.println("    |");
-                System.out.println("   ===");
-                System.out.print("\n");
-                System.out.printf("You are on your  %d try.\n", tries);
-                break;
-                    case 2:
-                        System.out.println("+--+");
-                        System.out.println("|  |");
-                        System.out.println("    |");
-                        System.out.println("    |");
-                        System.out.println("    |");
-                        System.out.println("   ===");
-                        System.out.print("\n");
-                        System.out.printf("You are on your  %d try.\n", tries);
-                        break;
-                    case 3:
-                        System.out.println("+--+");
-                        System.out.println("    |");
-                        System.out.println("    |");
-                        System.out.println("    |");
-                        System.out.println("   ===");
-                        System.out.print("\n");
-                        System.out.printf("You are on your  %d try.\n", tries);
-                        break;
-                    case 4:
-                        System.out.println("    |");
-                        System.out.println("    |");
-                        System.out.println("    |");
-                        System.out.println("   ===");
-                        System.out.print("\n");
-                        System.out.printf("You are on your  %d try.\n", tries);
-                        break;
-                    case 5:
-                        System.out.println("    |");
-                        System.out.println("    |");
-                        System.out.println("   ===");
-                        System.out.print("\n");
-                        System.out.printf("You are on your  %d try.\n", tries);
-                        break;
-                    case 6:
-                        System.out.println("    |");
-                        System.out.println("   ===");
-                        System.out.print("\n");
-                        System.out.printf("You are on your  %d try.\n", tries);
-                        break;
-                    case 7:
+                        if(wordIsGuessed && playerGuess.length <= randomWordToGuess.length){
+                            System.out.println("You got a letter right");
+                          break;
+                        } else {
                         System.out.println("   ===");
                         System.out.print("\n");
                         System.out.printf("You are on your  %d try.\n", tries);
                         break;
                 }
+                    case 2:
+                        if(wordIsGuessed && playerGuess.length <= randomWordToGuess.length){
+                            System.out.println("You got a letter right");
+                            break;
+                        } else {
+
+                            System.out.println("    |");
+                            System.out.println("   ===");
+                            System.out.print("\n");
+                            System.out.printf("You are on your  %d try.\n", tries);
+                        }
+                        break;
+                    case 3:
+                        if(wordIsGuessed && playerGuess.length <= randomWordToGuess.length){
+                            System.out.println("You got a letter right");
+                            break;
+                        } else {
+                            System.out.println("    |");
+                            System.out.println("    |");
+                            System.out.println("   ===");
+                            System.out.print("\n");
+                            System.out.printf("You are on your  %d try.\n", tries);
+                            break;
+                        }
+
+                    case 4:
+                        if(wordIsGuessed && playerGuess.length <= randomWordToGuess.length){
+                            System.out.println("You got a letter right");
+                            break;
+                        } else {
+                            System.out.println("    |");
+                            System.out.println("    |");
+                            System.out.println("    |");
+                            System.out.println("   ===");
+                            System.out.print("\n");
+                            System.out.printf("You are on your  %d try.\n", tries);
+
+                        }
+                    case 5:
+                        if(wordIsGuessed && playerGuess.length <= randomWordToGuess.length){
+                            System.out.println("You got a letter right");
+                            break;
+                        } else {
+
+                            System.out.println("+--+");
+                            System.out.println("    |");
+                            System.out.println("    |");
+                            System.out.println("    |");
+                            System.out.println("   ===");
+                            System.out.print("\n");
+                            System.out.printf("You are on your  %d try.\n", tries);
+                            break;
+                        }
+
+
+
+
+
+                    case 6:
+                        if(wordIsGuessed && playerGuess.length <= randomWordToGuess.length){
+                            System.out.println("You got a letter right");
+                            break;
+                        } else {
+
+                            System.out.println("+--+");
+                            System.out.println("|  |");
+                            System.out.println("    |");
+                            System.out.println("    |");
+                            System.out.println("    |");
+                            System.out.println("   ===");
+                            System.out.print("\n");
+                            System.out.printf("You are on your  %d try.\n", tries);
+                            break;
+                        }
+
+                    case 7:
+                        if(wordIsGuessed && playerGuess.length <= randomWordToGuess.length){
+                            System.out.println("You got a letter right");
+                            break;
+                        } else {
+                            System.out.println("+--+");
+                            System.out.println("|  |");
+                            System.out.println("o  |");
+                            System.out.println("    |");
+                            System.out.println("    |");
+                            System.out.println("    |");
+                            System.out.println("   ===");
+                            System.out.print("\n");
+                            System.out.printf("You are on your  %d try.\n", tries);
+                            break;
+                        }
+                }
+
 
 
                 if(input == '-'){
@@ -121,6 +169,8 @@ public class main {
             if(!wordIsGuessed){
                 System.out.println("You ran out of guesses.");
             }
+
+
 
             System.out.println("Would you like to play again? (yes/no) ");
             String choice = scanner.nextLine();
